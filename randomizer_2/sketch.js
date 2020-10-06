@@ -25,7 +25,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(1000, 600);
   background(255);
   imageMode(CENTER);
   angleMode(DEGREES);
@@ -68,10 +68,10 @@ function randomizer() {
     vertex(width*.98, height*.98);
     vertex(width*.02, height*.98);
     beginContour();
-    vertex(width*.04, height*.04);
-    vertex(width*.04, height*.96);
-    vertex(width*.96, height*.96);
-    vertex(width*.96, height*.04);
+    vertex(width*.032, height*.04);
+    vertex(width*.032, height*.96);
+    vertex(width*.968, height*.96);
+    vertex(width*.968, height*.04);
     endContour();
     endShape(CLOSE);
 
@@ -92,9 +92,9 @@ function buttonPressed() {
 function drawFrontPage() {
   push();
   textStyle(BOLD);
-  textSize(width*.18);
+  textSize(width*.12);
   strokeWeight(7);
-  text("おみくじ", width/2, height*.56);
+  text("おみくじ", width/2, height*.57);
   stroke(0);
   line(width*.13, height*.37, width*.87, height*.37);
   line(width*.13, height*.63, width*.87, height*.63);
@@ -106,10 +106,10 @@ function drawFrontPage() {
   vertex(width*.98, height*.98);
   vertex(width*.02, height*.98);
   beginContour();
-  vertex(width*.04, height*.04);
-  vertex(width*.04, height*.96);
-  vertex(width*.96, height*.96);
-  vertex(width*.96, height*.04);
+  vertex(width*.032, height*.04);
+  vertex(width*.032, height*.96);
+  vertex(width*.968, height*.96);
+  vertex(width*.968, height*.04);
   endContour();
   endShape(CLOSE);
   pop();
