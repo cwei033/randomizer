@@ -26,13 +26,16 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600);
-  background(200);
-  textSize(32);
+  background(255);
   imageMode(CENTER);
   angleMode(DEGREES);
-
   textAlign(CENTER);
-  text("click to randomize!", 300, 300);
+
+  textStyle(NORMAL);
+  textSize(width*.05);
+  noStroke();
+
+  drawFrontPage();
 
   button = createButton("Receive Fortune...");
   button.mousePressed(buttonPressed);
@@ -54,12 +57,26 @@ function draw() {
 
 function randomizer() {
   animating = false;
+
   if (desserts[0]) {
-    background(random(200, 255));
+    background(255);
+
+    fill(0);
+    beginShape();
+    vertex(width*.02, height*.02);
+    vertex(width*.98, height*.02);
+    vertex(width*.98, height*.98);
+    vertex(width*.02, height*.98);
+    beginContour();
+    vertex(width*.04, height*.04);
+    vertex(width*.04, height*.96);
+    vertex(width*.96, height*.96);
+    vertex(width*.96, height*.04);
+    endContour();
+    endShape(CLOSE);
+
     randomIndex = int(random(desserts.length));
-
     text(`${desserts[randomIndex].name} key ingredient: ${desserts[randomIndex].ingredients}`, width / 2, height / 2);
-
     desserts.splice(randomIndex, 1);
   } else {
     background(random(200, 255));
@@ -72,9 +89,35 @@ function buttonPressed() {
   animating = true;
 }
 
+function drawFrontPage() {
+  push();
+  textStyle(BOLD);
+  textSize(width*.18);
+  strokeWeight(7);
+  text("おみくじ", width/2, height*.56);
+  stroke(0);
+  line(width*.13, height*.37, width*.87, height*.37);
+  line(width*.13, height*.63, width*.87, height*.63);
+  fill(0);
+  noStroke();
+  beginShape();
+  vertex(width*.02, height*.02);
+  vertex(width*.98, height*.02);
+  vertex(width*.98, height*.98);
+  vertex(width*.02, height*.98);
+  beginContour();
+  vertex(width*.04, height*.04);
+  vertex(width*.04, height*.96);
+  vertex(width*.96, height*.96);
+  vertex(width*.96, height*.04);
+  endContour();
+  endShape(CLOSE);
+  pop();
+}
+
 function drawOmikujiBox(rotation) {
   push();
-  background('maroon');
+  background(255);
   translate(width / 2, height / 2);
   rotate(rotation);
   image(omikujiBox, 0, 0);
