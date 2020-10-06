@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+.navy {
+  color: navy;
+}
+
+#firstp {
+
+
+}
+
+.one {
+  display: inline-block;
+
+}
+
+.two {
+  background-color: orange;
+  max-width: 400px;
+  margin: 50;
+
+}
