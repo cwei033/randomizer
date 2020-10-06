@@ -94,7 +94,7 @@ function drawFrontPage() {
   textStyle(BOLD);
   textSize(width*.12);
   strokeWeight(7);
-  text("おみくじ", width/2, height*.57);
+  text("おみくじ", width/2, height*.575);
   stroke(0);
   line(width*.13, height*.37, width*.87, height*.37);
   line(width*.13, height*.63, width*.87, height*.63);
