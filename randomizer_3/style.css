@@ -1,0 +1,61 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url('backgroundimage.jpg');
+
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-top: 5px;
+  margin: 15px auto;
+  text-align: center;
+  font-size: 60px;
+}
+
+.whitebg {
+  background-color: white;
+  width: 1000px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin: -30px auto 10px auto;
+  text-align: center;
+  letter-spacing: 15px;
+  background-color: white;
+  padding-bottom: 5px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+
+}
+
+.one {
+  background-color: orange;
+  max-width: 400px;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+
+.two {
+  background-color: orange;
+  max-width: 400px;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+#randomizerButton {
+  margin:0 auto;
+}
