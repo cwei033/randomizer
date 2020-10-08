@@ -71,6 +71,10 @@ h2 {
   margin-top: -35px;
 }
 
+.chinese {
+  font-size: 14px;
+}
+
 #randomizerButton {
   margin:0 auto;
 }
