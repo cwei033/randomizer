@@ -75,6 +75,11 @@ h2 {
   font-size: 14px;
 }
 
+#title {
+  text-decoration: none;
+  color: black;
+}
+
 #randomizerButton {
   margin:0 auto;
 }
